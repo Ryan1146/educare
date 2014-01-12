@@ -1,0 +1,43 @@
+<div class="well">
+<%= form_for @teacher do |f| %>
+	
+	<% if(@teacher.errors.any?) %>
+		<div id="error_explanation">
+			<h2><%= pluralized(@teacher.error.count , "error") %> prohibited this messge being saved:</h2>
+			<ul>
+				<%= @teacher.errors.full_message.each do |msg|%>
+					<li><%= msg%></li>
+				<% end %>
+			</ul>
+
+		</div>
+	<%end%>
+
+	<div class="form-group">
+		<%=f.label(:name, 'Named')%>
+		<%=f.text_field(:name , class: "form-control")%>
+	</div>
+
+	<div class="form-group">
+		<%=f.label(:background)%>
+		<%=f.text_field(:background , class: "form-control") %>
+	</div>
+
+	<div class="form-group">
+		<%=f.label(:expertise)%>
+		<%=f.text_area(:expertise , class: "form-control") %>
+	</div>
+
+	<div class="form-group">
+		<%=f.label(:introduction)%>
+		<%=f.text_area(:introduction , class: "form-control") %>
+	</div>
+
+	 <div class="form-group">
+    <%= f.submit(class: "btn btn-primary") %>
+  </div>
+
+
+<%end%>
+</div>
+

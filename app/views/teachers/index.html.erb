@@ -1,21 +1,31 @@
-<h1> 咨詢團隊</h1>
-<hr>
+
+<h1>咨詢團隊</h1>
+
+
+<ul class="nav nav-tabs nav-justified">
+  <li class="active"><a href="#">第一類組</a></li>
+  <li><a href="#">第二類組</a></li>
+  <li><a href="#">第三類組</a></li>
+</ul>
+
+
+</br>
 
 <div class="row">
 
 	<% @teachers.each do |teacher| %>
 
-		<div class="col-md-4">
+		<div class="col-md-3">
 			
 			<div class="col-md-12 panel panel-default">
 			  
-			  <div class="panel-heading">
-			  	<p><%= teacher.background %></p>
+			  <div class="panel-heading center">
+			  	<%= teacher.background %></br>
 			  	<%= teacher.name %>
 			  </div>
 
 			  <div class="panel-body">
-			    Panel content
+			    <%= image_tag(teacher.image.url(:medium), class: "img-avatar img-rounded") %>
 			  </div>
 			
 				<div class="panel-footer">

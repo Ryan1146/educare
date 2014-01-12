@@ -1,5 +1,5 @@
 <div class="well">
-<%= form_for @teacher do |f| %>
+<%= form_for(@teacher , :html => { :multipart => true }) do |f| %>
 	
 	<% if(@teacher.errors.any?) %>
 		<div id="error_explanation">
@@ -12,6 +12,12 @@
 
 		</div>
 	<%end%>
+
+	<div class="form-group">
+		<%=f.label(:name, 'Named')%>
+		<%=f.file_field(:image , class: "form-control")%>
+	</div>
+
 
 	<div class="form-group">
 		<%=f.label(:name, 'Named')%>

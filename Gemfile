@@ -48,6 +48,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 
 
+
 #Heroku use the pg for database
 group :development, :test do
 	gem 'sqlite3'

@@ -1,0 +1,111 @@
+
+<h1>咨詢團隊</h1>
+
+
+
+<ul class="nav nav-tabs nav-justified">
+  <li class="active"><%= link_to( '第一類組' , academic_group_first_path)%></li>
+  <li><%= link_to( '第二類組' , academic_group_second_path)%></li>
+  <li><%= link_to( '第三類組' , academic_group_third_path)%></li>
+</ul>
+
+
+</br>
+
+<div class="row">
+
+	<div class="alert text-center alert-success">
+  <h4><strong>台/新北市</strong></h4>
+	</div>
+
+	<% @teachers.where(:location => 1).each do |teacher| %>
+
+		<div class="col-md-3">
+			
+			<div class="col-md-12 panel panel-default">
+			  
+			  <div class="panel-heading center">
+			  	<%= teacher.background %></br>
+			  	<%= teacher.name %>
+			  </div>
+
+			  <div class="panel-body">
+			    <%= image_tag(teacher.image.url(:medium), class: "img-avatar img-rounded") %>
+			  </div>
+			
+				<div class="panel-footer">
+					專長：</br>
+					<%= simple_format(teacher.expertise) %>
+				</div>
+			</div>
+		</div><!-- col-md-4 -->
+	<%end%>
+</div>
+
+
+
+<div class="row">
+
+	<div class="alert text-center alert-success">
+  <h4><strong>新竹縣/市</strong></h4>
+	</div>
+
+	<% @teachers.where(:location => 2).each do |teacher| %>
+
+		<div class="col-md-3">
+			
+			<div class="col-md-12 panel panel-default">
+			  
+			  <div class="panel-heading center">
+			  	<%= teacher.background %></br>
+			  	<%= teacher.name %>
+			  </div>
+
+			  <div class="panel-body">
+			    <%= image_tag(teacher.image.url(:medium), class: "img-avatar img-rounded") %>
+			  </div>
+			
+				<div class="panel-footer">
+					專長：</br>
+					<%= simple_format(teacher.expertise) %>
+				</div>
+			</div>
+		</div><!-- col-md-4 -->
+	<%end%>
+
+</div>
+
+
+<div class="row">
+	<div class="alert text-center alert-success">
+  <h4><strong>台南/高雄</strong></h4>
+	</div>
+
+	<% @teachers.where(:location => 3).each do |teacher| %>
+
+		<div class="col-md-3">
+			
+			<div class="col-md-12 panel panel-default">
+			  
+			  <div class="panel-heading center">
+			  	<%= teacher.background %></br>
+			  	<%= teacher.name %>
+			  </div>
+
+			  <div class="panel-body">
+			    <%= image_tag(teacher.image.url(:medium), class: "img-avatar img-rounded") %>
+			  </div>
+			
+				<div class="panel-footer">
+					專長：</br>
+					<%= simple_format(teacher.expertise) %>
+				</div>
+			</div>
+		</div><!-- col-md-4 -->
+	<%end%>
+
+</div>
+
+
+
+

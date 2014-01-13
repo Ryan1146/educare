@@ -1,5 +1,16 @@
-@import 'bootstrap';
 
+$font-family-sans-serif:  'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$alert-success-bg: #D6E1E9;
+$alert-success-text: #34495e;
+
+$nav-tabs-link-hover-border-color: #34495e; 
+$nav-tabs-active-link-hover-bg: #34495e;
+$nav-tabs-active-link-hover-color: #ecf0f1; 
+
+
+
+@import 'bootstrap';
+//import bootstrap should put below the customize code
 .center {
 	text-align: center;
 }
@@ -33,4 +44,8 @@ hr {
 
 .nav-tabs{
   padding-top:0px;
+}
+
+.active{
+  color: #D6E1E9;
 }

@@ -2,7 +2,11 @@ Educare::Application.routes.draw do
   
 
   resources :teachers
-  root "teachers#index"
+  get "academic_group_first" => "teachers#academic_group_first"
+  get "academic_group_second" => "teachers#academic_group_second"
+  get "academic_group_third" => "teachers#academic_group_third"
+  root "teachers#academic_group_first"
+  #root "teachers#index"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

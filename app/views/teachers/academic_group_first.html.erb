@@ -80,9 +80,13 @@
 			  </div>
 			
 				<div class="panel-footer">
-					專長：</br>
+					教學內容：</br>
 					<%= simple_format(teacher.expertise) %>
+					<div class="center">
+						<%= link_to('聯絡老師', new_teacher_student_path(teacher) , :class => "btn btn-primary" )%>
+					</div>
 				</div>
+
 			</div>
 		</div><!-- col-md-4 -->
 	<%end%>
@@ -111,9 +115,13 @@
 			  </div>
 			
 				<div class="panel-footer">
-					專長：</br>
+					教學內容：</br>
 					<%= simple_format(teacher.expertise) %>
+					<div class="center">
+						<%= link_to('聯絡老師', new_teacher_student_path(teacher) , :class => "btn btn-primary" )%>
+					</div>
 				</div>
+				
 			</div>
 		</div><!-- col-md-4 -->
 	<%end%>

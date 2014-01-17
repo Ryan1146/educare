@@ -1,0 +1,40 @@
+<div class="well">
+<%= form_for(@message) do |f| %>
+	
+	<% if(@message.errors.any?) %>
+		<div id="error_explanation">
+			<h2><%= pluralized(@message.error.count , "error") %> prohibited this messge being saved:</h2>
+			<ul>
+				<%= message.errors.full_message.each do |msg|%>
+					<li><%= msg%></li>
+				<% end %>
+			</ul>
+
+		</div>
+	<%end%>
+
+	<div class="form-group">
+		<%=f.label(:name, '稱呼:')%>
+		<%=f.text_field(:name , class: "form-control")%>
+	</div>
+
+
+	<div class="form-group">
+		<%=f.label(:mail, 'Emal:')%>
+		<%=f.text_field(:mail , class: "form-control")%>
+	</div>
+
+
+	<div class="form-group">
+		<%=f.label(:content , "對Educare想說的話:")%>
+		<%=f.text_area(:content , class: "form-control", rows: "8") %>
+	</div>
+
+	 <div class="form-group">
+    <%= f.submit("送出資料" ,class: "btn btn-primary") %>
+  </div>
+
+
+<%end%>
+</div>
+

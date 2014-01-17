@@ -18,11 +18,23 @@
 <div class="container well">
 	<%= render 'layouts/header'%>
 	
-	<%flash.each do |name,msg|%>
-		
-	<% end%>
+	
+	<% flash.each do |name, msg| %>
+			<%= content_tag(:div ,msg,class:"alert alert-info")%>
+	<% end %>
+
 
 	<%= yield %>
+
+
+	<div class="well center">
+		<footer>
+	        <p>&copy;2014 <a href="http://www.educare.com">eduCare</a>. All Rights Reserved.</p>       
+	  </footer>
+	</div>
+</div>
+
+	
 
 </body>
 </html>

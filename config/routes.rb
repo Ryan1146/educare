@@ -6,10 +6,13 @@ Educare::Application.routes.draw do
     resources :students
   end
 
+  resources :messages
+
   get "academic_group_first" => "teachers#academic_group_first"
   get "academic_group_second" => "teachers#academic_group_second"
   get "academic_group_third" => "teachers#academic_group_third"
   root "teachers#academic_group_first"
+  get "about" => "pages#about"
   #root "teachers#index"
 
 

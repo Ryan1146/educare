@@ -1,4 +1,34 @@
-<h1>親愛的家長您好，</h1>
-<%= render 'form'%>
 
+<div class="row">
+	<div class="well">
+		<h4 >親愛的家長您好，請留下您的連落資料，我們會儘快和老師聯絡並與您確認，謝謝～</h4>
+	</div>
+
+	<div class="col-md-4">
+			
+			<div class="col-md-12 panel panel-default">
+			  
+			  <div class="panel-heading center">
+			  	<%= @teacher.background %></br>
+			  	<%= @teacher.name %>
+			  </div>
+
+			  <div class="panel-body">
+			    <%= image_tag(@teacher.image.url(:medium), class: "img-avatar img-rounded") %>
+			  </div>
+			
+				<div class="panel-footer">
+					專長：</br>
+					<%= simple_format(@teacher.expertise) %>
+				</div>
+
+			</div>
+	</div>
+
+	<div class="col-md-8">
+		<%= render 'form'%>
+	</div>
+	
+
+</div>
 <%= link_to('Back' , root_path)%>

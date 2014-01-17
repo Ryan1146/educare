@@ -3,8 +3,8 @@ class CreateTeachers < ActiveRecord::Migration
     create_table :teachers do |t|
       t.string :name
       t.string :background
-      t.string :academic_group
-      t.string :location
+      t.integer :academic_group
+      t.integer :location
       t.text :expertise
       t.text :introduction
 

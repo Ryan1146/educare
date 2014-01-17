@@ -1,0 +1,45 @@
+<div class="well">
+<%= form_for([@teacher , @student] ) do |f| %>
+	
+	<% if(@student.errors.any?) %>
+		<div id="error_explanation">
+			<h2><%= pluralized(@student.error.count , "error") %> prohibited this messge being saved:</h2>
+			<ul>
+				<%= @student.errors.full_message.each do |msg|%>
+					<li><%= msg%></li>
+				<% end %>
+			</ul>
+
+		</div>
+	<%end%>
+
+	<div class="form-group">
+		<%=f.label(:name, 'Named')%>
+		<%=f.text_field(:name , class: "form-control")%>
+	</div>
+
+
+	<div class="form-group">
+		<%=f.label(:mail, 'Name')%>
+		<%=f.text_field(:mail , class: "form-control")%>
+	</div>
+
+	<div class="form-group">
+		<label>聯絡電話</label>
+		<%=f.text_field(:phoneNumbers , class: "form-control") %>
+	</div>
+
+
+	<div class="form-group">
+		<%=f.label(:message , "留言給老師：")%>
+		<%=f.text_area(:message , class: "form-control") %>
+	</div>
+
+	 <div class="form-group">
+    <%= f.submit(class: "btn btn-primary") %>
+  </div>
+
+
+<%end%>
+</div>
+

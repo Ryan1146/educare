@@ -3,11 +3,15 @@
 one:
   name: MyString
   background: MyString
-  expertise: MyString
+  academic_group: MyString
+  location: MyString
+  expertise: MyText
   introduction: MyText
 
 two:
   name: MyString
   background: MyString
-  expertise: MyString
+  academic_group: MyString
+  location: MyString
+  expertise: MyText
   introduction: MyText

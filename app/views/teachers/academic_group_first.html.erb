@@ -36,8 +36,14 @@
 				<div class="panel-footer">
 					專長：</br>
 					<%= simple_format(teacher.expertise) %>
+					<div class="center">
+						<%= link_to('聯絡老師', new_teacher_student_path(teacher) , :class => "btn btn-info" )%>
+					</div>
 				</div>
+
 			</div>
+
+
 		</div><!-- col-md-4 -->
 	<%end%>
 </div>

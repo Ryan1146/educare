@@ -1,7 +1,11 @@
 Educare::Application.routes.draw do
   
 
-  resources :teachers
+  #resources :teachers
+  resources :teachers do
+    resources :students
+  end
+
   get "academic_group_first" => "teachers#academic_group_first"
   get "academic_group_second" => "teachers#academic_group_second"
   get "academic_group_third" => "teachers#academic_group_third"

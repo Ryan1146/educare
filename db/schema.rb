@@ -11,20 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140113144553) do
+ActiveRecord::Schema.define(version: 20140117020816) do
 
   create_table "students", force: true do |t|
     t.string   "name"
     t.string   "mail"
-    t.string   "phone"
+    t.string   "phoneNumbers"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "teacher_id"
+    t.text     "message"
   end
 
   create_table "teachers", force: true do |t|
     t.string   "name"
     t.string   "background"
-    t.string   "expertise"
+    t.string   "academic_group"
+    t.string   "location"
+    t.text     "expertise"
     t.text     "introduction"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -32,8 +36,6 @@ ActiveRecord::Schema.define(version: 20140113144553) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.integer  "academic_group"
-    t.integer  "location"
   end
 
 end

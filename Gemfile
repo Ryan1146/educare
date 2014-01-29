@@ -51,7 +51,8 @@ gem 'will_paginate-bootstrap'
 
 #Heroku use the pg for database
 group :development, :test do
-	gem 'sqlite3'
+	#gem 'sqlite3'
+	gem 'mysql2'
 end
 
 group :production do

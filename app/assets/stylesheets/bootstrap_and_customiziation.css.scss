@@ -12,10 +12,14 @@ $btn-info-bg: #34495e;
 $jumbotron-bg: #bdc3c7;
 
 
-$navbar-inverse-bg: #EFF3DA;
+//$navbar-inverse-bg: #EFF3DA;
+//$navbar-inverse-bg: #ecf0f1;
+$navbar-default-bg: #ecf0f1;
+$navbar-default-border: #ecf0f1, 0%;
+
 
 $navbar-inverse-link-hover-color: #34495e; 
-
+$btn-default-color: #2c3e50;
 
 
 
@@ -24,6 +28,7 @@ $navbar-inverse-link-hover-color: #34495e;
 .center {
 	text-align: center;
 }
+
 
 .right{
   text-align: right;
@@ -79,6 +84,28 @@ hr {
 span.contact{
   margin-left:10px;
 }
+
+.navbar-nav.navbar-right:last-child {
+  margin-top: 30px;
+  font-size: 14px;
+  margin-right: 30px;
+}
+
+.btn-group-justified{
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+.panel-default{
+  padding-right:0px;
+  padding-left:0px;
+}
+
+
+
+
+
+
 
 
 

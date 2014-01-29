@@ -1,0 +1,32 @@
+$(document).ready(function(){
+
+	$("#button-img-1").hover(function(){
+
+			$(this).addClass("active");
+			$(this).siblings("a").removeClass("active");
+			//$(this).attr('src', 'https://dl.dropboxusercontent.com/u/256084506/background2.jpg');
+			$("#introduction-img").attr('src', '<%= image_path("dm.jpg")%>');
+		});
+
+
+	$("#button-img-2").hover(function(){
+
+		$(this).addClass("active");
+		$(this).siblings("a").removeClass("active");
+		//$(this).attr('src', 'https://dl.dropboxusercontent.com/u/256084506/background2.jpg');
+		$("#introduction-img").attr('src', 'https://dl.dropboxusercontent.com/u/256084506/background2.jpg');
+	});
+
+
+
+	$("#button-img-3").hover(function(){
+
+		$(this).addClass("active");
+		$(this).siblings("a").removeClass("active");
+		//$(this).attr('src', 'https://dl.dropboxusercontent.com/u/256084506/background2.jpg');
+		$("#introduction-img").attr('src', 'https://dl.dropboxusercontent.com/u/256084506/background2.jpg');
+	});
+
+
+});
+

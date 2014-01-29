@@ -11,7 +11,7 @@ Educare::Application.routes.draw do
   get "academic_group_first" => "teachers#academic_group_first"
   get "academic_group_second" => "teachers#academic_group_second"
   get "academic_group_third" => "teachers#academic_group_third"
-  root "teachers#academic_group_first"
+  root "pages#home"
   get "about" => "pages#about"
   #root "teachers#index"
 

@@ -14,7 +14,7 @@ $(document).ready(function(){
 		$(this).addClass("active");
 		$(this).siblings("a").removeClass("active");
 		//$(this).attr('src', 'https://dl.dropboxusercontent.com/u/256084506/background2.jpg');
-		$("#introduction-img").attr('src', 'https://dl.dropboxusercontent.com/u/256084506/background2.jpg');
+		$("#introduction-img").attr('src', '<%= image_path("background2.jpg")%>');
 	});
 
 

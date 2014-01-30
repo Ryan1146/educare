@@ -1,30 +1,30 @@
 $(document).ready(function(){
 
-	$("#button-img-1").hover(function(){
+	$("#button-img-1").click(function(){
 
 			$(this).addClass("active");
 			$(this).siblings("a").removeClass("active");
 			//$(this).attr('src', 'https://dl.dropboxusercontent.com/u/256084506/background2.jpg');
-			$("#introduction-img").attr('src', '<%= image_path("dm.jpg")%>');
+			$("#introduction-img").attr('src', '<%= image_path("poster1.png")%>');
 		});
 
 
-	$("#button-img-2").hover(function(){
+	$("#button-img-2").click(function(){
 
 		$(this).addClass("active");
 		$(this).siblings("a").removeClass("active");
 		//$(this).attr('src', 'https://dl.dropboxusercontent.com/u/256084506/background2.jpg');
-		$("#introduction-img").attr('src', '<%= image_path("background2.jpg")%>');
+		$("#introduction-img").attr('src', '<%= image_path("poster2.png")%>');
 	});
 
 
 
-	$("#button-img-3").hover(function(){
+	$("#button-img-3").click(function(){
 
 		$(this).addClass("active");
 		$(this).siblings("a").removeClass("active");
 		//$(this).attr('src', 'https://dl.dropboxusercontent.com/u/256084506/background2.jpg');
-		$("#introduction-img").attr('src', 'https://dl.dropboxusercontent.com/u/256084506/background2.jpg');
+		$("#introduction-img").attr('src', '<%= image_path("poster3.png")%>');
 	});
 
 

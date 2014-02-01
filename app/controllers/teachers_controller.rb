@@ -37,7 +37,7 @@ class TeachersController < ApplicationController
 		if(@teacher.save)
 			redirect_to(@teacher, notice: 'teacher was successfully created')
 		else
-			format.html {render action: 'news'}
+			format.html {render action: 'new'}
 		end
 
 	end

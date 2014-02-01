@@ -1,0 +1,37 @@
+
+
+
+<% @articles.each do |article|%>
+	
+
+<div class="content">
+
+<div class="post container">
+	<div class = row>
+		<div class="col-md-12">
+		<h2><strong><%= article.title %></strong></h2>
+		</div>
+	</div>
+
+	<br>
+		
+	<div class="row">
+	
+		<div class="col-md-4">
+			<%= image_tag(article.image.url(:medium), class: "img-rounded img-article") %>
+		</div>
+		<div class="col-md-8">
+			<h4><%= simple_format(article.content) %></h4>
+		</div>
+
+
+	</div>
+
+	<!--<hr class="style-four">-->
+</div>
+
+</div>
+
+<%end%>
+
+

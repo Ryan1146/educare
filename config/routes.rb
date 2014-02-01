@@ -7,7 +7,7 @@ Educare::Application.routes.draw do
   end
 
   resources :messages
-  resorces :articles
+  resources :articles
 
   get "academic_group_first" => "teachers#academic_group_first"
   get "academic_group_second" => "teachers#academic_group_second"
